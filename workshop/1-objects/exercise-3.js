@@ -53,3 +53,15 @@ const staffMembers = [
 // Write a line that will print the JavaScript level for employee Chuck Taylor.
 
 // You will need both Array and Object syntax.
+let bestEmployee = staffMembers[0];
+
+staffMembers.forEach(function(staff){
+    if (staff.skillLevels.javascript > bestEmployee.skillLevels.javascript) {
+        bestEmployee = staff
+    }
+});
+
+let work = [];
+work.push(bestEmployee.name)
+work.push(bestEmployee.skillLevels.javascript)
+console.log(work)

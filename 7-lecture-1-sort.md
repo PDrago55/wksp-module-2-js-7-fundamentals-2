@@ -10,6 +10,8 @@ const characters = ['Rick', 'Morty', 'Summer', 'Beth', 'Jerry'];
 characters.sort();
 
 // outcome?
+// sorts them in alphabetical order
+// but what happens when one of the names is not capitalized? it doesn't sort that word.
 ```
 
 ---
@@ -34,6 +36,8 @@ const numbers = [123, 13, 12, 6, 76, 0, 9];
 numbers.sort();
 
 // outcome?
+// it sorts out as 'alphabetical' so 9 is going to be the last number on list cause it is largest// 
+
 ```
 
 ---
@@ -52,9 +56,17 @@ numbers.sort();
 ```js
 const numbers = [123, 13, 12, 6, 76, 0, 9];
 
-numbers.sort((a, b) => a - b)
+numbers.sort((a, b) => {
+    return a - b;
+    })
 
 // outcome?
+//sorts them from smallest to largest 
+// or 
+numbers.sort((a, b) => b - a)
+
+//returns largest to smallest 
+
 ```
 
 ---

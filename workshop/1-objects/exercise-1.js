@@ -16,8 +16,24 @@
 //     monthOfBirth: 'July'
 // }
 
-// A) console.log() your object.
-// B) console.log() a few of the values in the object.
+let myLife = {
+    name: {
+        first: 'Paolo',
+        last: 'Drago',
+    },
+    age: '23',
+    city: 'Montreal',
+    siblings: 1,
+    petName: 'Bruh',
+    monthOfBirth: 'June'
+}
+
+
+console.log(myLife); 
+console.log(myLife.name.first);
+console.log(myLife.petName);
+console.log(myLife.city); 
+
 
 //-------------------------------------------------
 
@@ -31,6 +47,27 @@
 //     - Pets (number of pets, names of pets, etc.)
 
 // HINT: You can just modify the object that you created before.
+
+let myLife = {
+    name: {
+        first: 'Paolo',
+        last: 'Drago',
+    },
+    age: '23',
+    city: 'Montreal',
+    siblings: 1,
+    petName: 'Bruh',
+    monthOfBirth: 'June',
+    bestTV: 'Sopranos',
+    occupation: 'student:(',
+    favsport: 'hockey',
+}
+
+
+console.log(myLife); 
+console.log(myLife.occupation);
+console.log(myLife.bestTV);
+console.log(myLife.favsport); 
 
 //-------------------------------------------------
 
@@ -48,7 +85,18 @@
 // represent a collection of similar things?
 
 var favoriteMovie = {
-
+    title: 'Pulp Fiction',
+    Director: 'Quentin Tarantino',
+    YearReleased: 1994,
+    Rating: 8.9,
+    Actors: {
+        first: 'Bad',
+        last: 'MotherFucker',
+        first: 'My',
+        last: 'Watch!',
+        first: "Royale",
+        last: 'Cheese',
+    }
 }
 
 
@@ -65,8 +113,8 @@ const person = {
     hometown: "somewhere"
 };
 
-person[age];    // => 26
-person.key;     // => "Alyssa P. Hacker"
+console.log(person.age);    // => 26
+console.log(person.name);     // => "Alyssa P. Hacker"
 
 
 //-------------------------------------------------
@@ -89,11 +137,10 @@ const alyssa = {
 };
 
 function fullName(person) {
-    // Your code here
-
+return Object.values(alyssa.name);
 }
 
-console.log(fullName(alyssa)); // => "Alyssa P. Hacker"
+console.log(fullName(alyssa));// => "Alyssa P. Hacker"
 
 // Exercise 1.5
 // ------------
@@ -114,8 +161,9 @@ const rick = {
 };
 
 function betterFullName(person) {
-    // Your code here
-
+let x = Object.values(rick.name);
+let y = x.join(); // is this doing anything?// 
+return y;
 }
 
 console.log(betterFullName(rick)); // => "Rick Sanchez"

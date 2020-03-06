@@ -10,4 +10,13 @@ const earlyBirds = ["Ellen", "Jerry", "Jasmine"];
 // Write a program that will do the following:
 // Output them in a tidy list from first to last arrival the console.
 
+const lateComers = ["Felicia", "Charles", "Terry"];
+const earlyBirds = ["Ellen", "Jerry", "Jasmine"];
+let fuck = lateComers.concat(earlyBirds).forEach(function(fuck, index){
+    let losers = index + 1;
+  let leave = `you arrived ${losers}`+ ' ' + fuck;
+    console.log(leave);
+});
+
+
 // NO for loops!
