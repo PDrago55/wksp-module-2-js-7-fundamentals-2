@@ -16,6 +16,15 @@ const people = [
 // `name` key does not have the same "shape" as the ones above, make sure you
 // change it to look like these).
 
+const people = [
+    {name: {first: "Alyssa", middle: "P.", last: "Hacker"}, age: 26},
+    {name: {first: "Ben", last: "Bitdiddle"}, age: 34},
+    {name: {first: "Eva", middle: "Lu", last: "Ator"}, age: 40},
+    {name: {first: "Lem", middle: "E.", last: "Tweakit"}, age: 45},
+    {name: {first: "Louis", last: "Reasoner"}, age: 21},
+    {name: {first: "Shahan", middle: "Haig", last: "Krakirian"}, age: 21},
+    {name: {first: "Paolo", middle: "Fucker", last: "Drago"}, age: 23}
+];
 
 //-------------------------------------------------
 
@@ -23,11 +32,16 @@ const people = [
 // ------------
 // Write a function that returns the average age of the `people` array.
 
-function avgAge(peopleArr) {
-    // Yuor code here
-}
-
-console.log(`Average age is ${avgAge(people)}.`);
+    
+function avgAge(people) {
+        let avg = 0;
+        people.forEach(function(item){
+        avg += item.age;  
+        })
+        return avg/7;
+    }
+    
+    console.log(`Average age is ${avgAge(people)}.`);
 
 
 //-------------------------------------------------
@@ -38,12 +52,13 @@ console.log(`Average age is ${avgAge(people)}.`);
 // an argument, returns an array of their full names (each full name is a string).
 // Can you make use of your `fullName` function here?
 
-function fullName(peopleArr) {
-    // Your code here
-
+for (let i = 0; i < people.length; i++){
+    let value = Object.values(people[i].name);
+    console.log(value); 
 }
 
-console.log(fullName(people)); 
+
+
 
 
 //-------------------------------------------------
@@ -53,9 +68,8 @@ console.log(fullName(people));
 // Write a function that, when given *people* and an *age* as arguments,
 // returns an array of just the people that are older than the specified age.. 
 
+
 function olderPeople(peopleArr, age) {
-    // Your code here
-
+    return people.filter((peopleArr) => (people.age > 26))
 }
-
 console.log(olderPeople(people, 26));

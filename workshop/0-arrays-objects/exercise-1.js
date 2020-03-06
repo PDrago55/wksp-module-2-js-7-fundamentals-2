@@ -10,10 +10,28 @@ var mostPopularFood = [
     'chicken burritos',
     'chicken sandwich',
     'cauliflower rice bowl',
-    'chicken and waffle sliders',
-    'parmesan chicken',
+    'chicken and waffle sliders', 
+    'parmesan chicken', 
     undefined,
 ];
+
+
+
+mostPopularFood.unshift('bean burritos');
+mostPopularFood.pop('');
+mostPopularFood.push('buffalo-flavoured cauliflower');
+
+mostPopularFood.forEach(function(mostPopularFood, index){
+    let rank = index + 1;
+    let bruh = rank + ',' + mostPopularFood;
+    console.log(bruh);
+})
+
+
+
+
+// Object.keys(mostPopularFood).sort(bestBro => {
+//     console.log(mostPopularFood[bestBro])});
 
 // The array holds a top-ten list of foods as ranked by Grubhub.
 // #1 and #10 are missing

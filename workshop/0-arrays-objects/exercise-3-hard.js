@@ -1,6 +1,6 @@
 // Exercise 3 (hard)
 // -------------------
-const colors = ["red", "orange", "yellow", "green", "pink", "black", "gray", "blue", "violet"];
+// const colors = ["red", "orange", "yellow", "green", "pink", "black", "gray", "blue", "violet"];
 
 // The array above contains all the colors in the visible light spectrum but has some
 // that don't belong. In case you've forgotten, the colors in the spectrum are:
@@ -10,3 +10,12 @@ const colors = ["red", "orange", "yellow", "green", "pink", "black", "gray", "bl
 
 // You must console the colors array.
 // NO for loops!
+const colors = ["red", "orange", "yellow", "green", "pink", "black", "gray", "blue", "violet"];
+const spectrum = ["red", "orange", "yellow", "green", "blue", "violet"];
+
+
+let fix = colors.filter(function(item){
+   let doesInclude = spectrum.includes(item);
+   return doesInclude;
+});
+    console.log(fix);
